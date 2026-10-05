@@ -1,7 +1,5 @@
 # Agentic Data Migration Planner & Reconciliation Workbench
 
-> **A bounded MVP, not a production migration platform.** One source, one target, one dataset of at most 100 records, a fixed list of transformations, and a *mock* target store inside MongoDB.
-
 An AI agent **plans** a migration from a source schema to a target schema. A person **approves** the plan. A deterministic backend **dry-runs and executes** it, quarantines bad records with field-level evidence, refuses to insert duplicates on retry, reconciles totals, and can roll the whole thing back.
 
 ```

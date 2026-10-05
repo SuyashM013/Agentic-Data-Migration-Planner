@@ -10,10 +10,12 @@
     "seed": "node src/seed/seed.js",
     "test": "jest --runInBand --forceExit"
   },
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.6.1",
     "express": "^4.19.2",
     "mongoose": "^8.5.1"
   },
@@ -26,4 +28,3 @@
     "testTimeout": 30000
   }
 }
-

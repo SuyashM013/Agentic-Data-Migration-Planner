@@ -1,6 +1,19 @@
 # AGENT_USAGE.md
 
-How AI is used in this project, what it is trusted with (very little), and how its output is verified. Two different kinds of AI use are covered: **AI at runtime** (the migration agent) and **AI used to build the code**.
+This document describes how AI is used in the project, what tasks are delegated to AI, what remains deterministic, and how AI output is verified before it can affect migration execution.
+
+## AI used during development
+
+Claude, GPT, Replit and Windsurf was used extensively during development to:
+- generate application code
+- implement backend services
+- implement frontend components
+- write tests
+- debug implementation issues
+- review architecture
+- generate documentation
+
+All generated code was executed and verified through automated tests and manual end-to-end testing.
 
 ---
 
@@ -10,8 +23,8 @@ How AI is used in this project, what it is trusted with (very little), and how i
 |---|---|---|
 | Runtime | **OpenAI API** (`AI_PROVIDER=openai`, default model `gpt-4o-mini`) or **Google Gemini API** (`AI_PROVIDER=gemini`, default `gemini-2.0-flash`) | Proposes the migration plan through read-only tools |
 | Runtime (offline) | **Mock heuristic planner** (`AI_PROVIDER=mock`) | **Not an LLM.** Name-similarity rules behind the same provider interface, so the full agent loop runs without a key |
-| Build time | **Claude (Anthropic)**, used in a chat session with a sandboxed shell | Wrote the code, tests and docs in this repository, phase by phase, running the tests as it went |
-| Build time | FerretDB (MongoDB-compatible server) | Let the build session run integration tests where MongoDB binaries could not be downloaded |
+| Build time | **Claude (Anthropic)**, used in a chat session  | Wrote the code, tests and docs in this repository, phase by phase, running the tests as it went |
+
 
 **Important honesty note:** the OpenAI and Gemini adapters were verified with mocked HTTP (request shape, tool-call parsing, key redaction, error handling), not against the live APIs. Everything in section 6 labelled *simulated* comes from scripted test replies, not from a real model run. Section 6 also contains a table for you to record real observations from your own run.
 
@@ -151,7 +164,8 @@ The failure modes below are the ones the system is designed to catch. They are *
 
 | Date | Provider / model | Dataset | What the model got wrong or was unsure about | Caught by | Outcome |
 |---|---|---|---|---|---|
-| | | | | | |
+| 2026-10-05 | Gemini | Customer migration | No significant incorrect mapping observed during manual testing | Human review + backend validation | Plan approved and migration completed successfully |
+
 
 ### 6b. Mistakes made by the AI that wrote this code (caught during the build)
 
@@ -197,3 +211,37 @@ AI output is **never trusted directly**. Before anything can be executed:
 7. **Reconciliation** after the fact compares accepted vs actually inserted, source = accepted + rejected, and quarantine = rejected.
 
 These controls are covered by automated tests (`npm test`, 56 tests).
+
+---
+## 9. Manual Verification Datasets
+
+The migration workflow was manually tested with the following scenarios:
+
+1. Customer migration
+   - Field renaming
+   - Phone normalization
+   - Invalid email
+   - Missing required fields
+   - Duplicate records
+
+2. Product migration
+   - String-to-number conversion
+   - Field renaming
+   - Unmapped legacy SKU
+
+3. Messy customer data
+   - Trim
+   - Lowercase
+   - Phone normalization
+
+4. Incompatible schema
+   - age → date_of_birth
+   - Expected result: AI flags the mapping as incompatible
+
+5. Retry/idempotency
+   - Same migration executed twice
+   - Expected result: no duplicate target records
+
+6. Multiple validation errors
+   - Multiple invalid fields in one record
+   - Expected result: all field-level errors preserved

@@ -12,9 +12,21 @@ The LLM never executes anything. It has five read-only tools, can only choose fr
 
 ---
 
+## Live Demo
+
+- **Frontend:** https://agentic-data-migration-planner.vercel.app/
+- **Backend API:** https://agentic-data-migration-planner-y6u8.onrender.com
+- **API Health Check:** https://agentic-data-migration-planner-y6u8.onrender.com/api/health
+
+> The application is deployed and available for reviewer evaluation.
+> The backend uses MongoDB persistence and the configured AI provider.
+
+--- 
 ## 1. Problem statement
 
 A company has records in an old schema and must move a bounded dataset into a new schema. Hand-writing the mapping is slow; letting an LLM write and run migration code is unsafe. This project shows a middle path: the model does the tedious reasoning (which field maps where, which conversion fits, what looks risky), and everything that changes data is plain, tested, deterministic code behind a human approval gate.
+
+---
 
 ## 2. Features
 
@@ -30,6 +42,8 @@ A company has records in an old schema and must move a bounded dataset into a ne
 - **Rollback** deleting only records this migration created; quarantine and history are preserved.
 - **Append-only history** and structured JSON logs with secret redaction.
 - Dashboard, plan review, dry run, execution, reconciliation, quarantine and history screens.
+
+---
 
 ## 3. Architecture
 
@@ -67,6 +81,8 @@ frontend/src/{app,components,lib}  pages, UI, API client
 
 The engine and the AI code share no logic. The only bridge is `planValidator`, which the AI's output must pass.
 
+---
+
 ## 4. AI agent architecture
 
 `services/agentService.js` runs a tool-calling loop against whichever provider is configured:
@@ -77,6 +93,8 @@ The engine and the AI code share no logic. The only bridge is `planValidator`, w
 4. The backend recomputes `unmappedSourceFields` / `unmappedTargetFields` itself and adds its own deterministic risks (e.g. a required target field with no mapping). It does not trust the model's lists.
 
 Providers (`AI_PROVIDER`): `openai`, `gemini` (both via plain `fetch`, no SDK), and `mock`, an **offline heuristic planner that is not an LLM**. It runs through the same tool loop so the whole app is demonstrable without an API key. Plans from it are labelled `ai:mock:heuristic`.
+
+---
 
 ## 5. Tool descriptions
 
@@ -91,6 +109,8 @@ Providers (`AI_PROVIDER`): `openai`, `gemini` (both via plain `fetch`, no SDK), 
 All five are read-only. There is no tool that writes, queries the database, or runs code.
 
 **Supported transformations:** `none`, `trim`, `lowercase`, `uppercase`, `normalize_phone` (digits only, 7-15 digits), `string_to_number`, `number_to_string`, `date_format` (DD/MM/YYYY, DD-MM-YYYY, YYYY/MM/DD or ISO → `YYYY-MM-DD`). Implemented in `engine/transformations.js`; a startup check fails if the whitelist and implementations ever drift apart.
+
+---
 
 ## 6. Migration lifecycle
 
@@ -108,6 +128,8 @@ Transitions are enforced by `services/stateMachine.js` using an atomic compare-a
 - A failed *retry* returns the migration to `COMPLETED` (earlier data is intact). A failed first execution becomes `FAILED` and can be re-run.
 - `ROLLED_BACK` is terminal for execution. Its only self-transition re-runs rollback cleanup if an earlier rollback was interrupted.
 
+---
+
 ## 7. Database design
 
 | Collection | Purpose |
@@ -119,6 +141,8 @@ Transitions are enforced by `services/stateMachine.js` using an atomic compare-a
 | `targetrecords` | The **mock target store**. Unique index on `idempotencyKey = migrationId:sourceRecordId` |
 
 Counts: **transformed** = records whose transformation stage ran without error; **accepted** = records that also passed all validation; **rejected** = the rest. Quarantine rows are written by the first successful execution (retries would only duplicate them); before execution, rejected records are visible in the dry run.
+
+---
 
 ## 8. API documentation
 
@@ -142,18 +166,22 @@ Base path `/api`. Errors are `{ "error": { "code", "message", "details" } }`.
 
 Common error codes: `VALIDATION_ERROR` 400, `PLAN_INVALID` 400, `PLAN_NOT_APPROVED` 409, `DRY_RUN_REQUIRED` 409, `DRY_RUN_STALE` 409, `INVALID_STATE` 409, `ALREADY_ROLLED_BACK` 409, `AI_NOT_CONFIGURED` 503, `AI_PROVIDER_ERROR` 502, `AI_PLAN_INVALID` 422.
 
+---
+
 ## 9. Local setup
 
 Requirements: Node 18+ (20 recommended), a MongoDB (local, Docker, or Atlas).
 
 ```bash
-git clone <repo> && cd migration-workbench
+git clone https://github.com/SuyashM013/Agentic-Data-Migration-Planner 
 cp .env.example backend/.env        # then edit backend/.env
 cp .env.example frontend/.env       # keep only VITE_API_URL if you like
-cd backend && npm install && cd ../frontend && npm install
+cd backend && npm install && cd frontend && npm install
 ```
 
 No MongoDB handy? `docker run -d -p 27017:27017 mongo:7` and leave `MONGODB_URI` as `mongodb://127.0.0.1:27017/migration_workbench`.
+
+---
 
 ## 10. Environment variables
 
@@ -163,19 +191,21 @@ No MongoDB handy? `docker run -d -p 27017:27017 mongo:7` and leave `MONGODB_URI`
 | `MONGODB_URI` | backend | Mongo connection string |
 | `CORS_ORIGIN` | backend | Allowed frontend origin(s), comma-separated (`*` allows all) |
 | `MAX_SAMPLE_RECORDS` | backend | Hard cap on dataset size (default 100) |
-| `AI_PROVIDER` | backend | `openai`, `gemini` or `mock` |
+| `AI_PROVIDER` | backend |  `gemini` or `mock` |
 | `OPENAI_API_KEY`, `OPENAI_MODEL` | backend | Used when `AI_PROVIDER=openai` (default model `gpt-4o-mini`) |
-| `GEMINI_API_KEY`, `GEMINI_MODEL` | backend | Used when `AI_PROVIDER=gemini` (default `gemini-2.0-flash`) |
+| `GEMINI_API_KEY`, `GEMINI_MODEL` | backend | Used when `AI_PROVIDER=gemini` (default `gemini-2.5-flash`) |
 | `AI_TIMEOUT_MS` | backend | Per-request timeout to the AI provider |
 | `VITE_API_URL` | frontend | Public URL of the API |
 
 Keys live only in the backend environment and never reach the browser. `.env` is git-ignored; `.env.example` contains names only.
 
+---
+
 ## 11-13. Running
 
 ```bash
 # backend (terminal 1)
-cd backend && npm run dev         # or: npm start
+cd backend && npm run dev         
 npm run seed                      # optional: creates the two demo migrations as drafts
 
 # frontend (terminal 2)
@@ -184,11 +214,16 @@ cd frontend && npm run dev        # http://localhost:5173
 
 Set `AI_PROVIDER=mock` to try everything without an API key.
 
+--
+
 ## 14. Running tests
 
 ```bash
 cd backend && npm test
 ```
+- OpenAI/Gemini provider integrations were verified through live application testing.
+- Provider-specific HTTP behavior is also covered by mocked automated tests.
+- The mock provider remains available for deterministic testing without an API key.
 
 Uses `mongodb-memory-server` (downloads a MongoDB binary on first run). To use your own server instead: `MONGODB_TEST_URI=mongodb://127.0.0.1:27017 npm test` (a throwaway database is created and dropped).
 
@@ -197,28 +232,75 @@ Uses `mongodb-memory-server` (downloads a MongoDB binary on first run). To use y
 - `engine.test.js`: plan validation (valid / invented field / unsupported transformation / type mismatch), input validation and size cap, every transformation, invalid-email rejection, all-errors-preserved, the 100 → 97 → 92 → 8 demo dataset, determinism.
 - `ai.test.js`: the agent loop with scripted model replies (repair after a bad plan, discard after two, unknown-tool refusal, runaway-tool stop), tool behaviour, OpenAI/Gemini request shaping and key redaction with mocked HTTP, logger redaction.
 - `workflow.test.js` (HTTP, real database): analysis, approval gate, no dry run/execute before approval, reviewer edit versioning, reject/regenerate, successful migration with quarantine evidence, duplicate retry (92 skipped), concurrent execute, unique-index enforcement, reconciliation pass and fail, mid-run failure compensation, scoped rollback (another migration untouched), history preserved.
-
+---
 ## 15. Deployment
 
-- **MongoDB Atlas:** create a free cluster, add a database user, allow your API host's IP, copy the connection string.
-- **Backend (Render):** `render.yaml` at the repo root defines the service (root dir `backend`, `npm start`, health check `/api/health`). Set `MONGODB_URI`, `OPENAI_API_KEY` (or `GEMINI_API_KEY`, with `AI_PROVIDER=gemini`), and `CORS_ORIGIN=https://<your-vercel-app>.vercel.app`. Railway and Fly.io work the same way: root `backend`, start command `npm start`.
-- **Frontend (Vercel):** import the repo, set the root directory to `frontend`, framework preset Vite, and set `VITE_API_URL=https://<your-api-host>`. `vercel.json` handles client-side routes.
+The application is deployed with the following architecture:
 
-Deploy the backend first, then set `VITE_API_URL`, then set `CORS_ORIGIN` to the frontend URL. The live deployment itself was not performed as part of this build.
+```text
+Vercel
+  │
+  │ HTTPS / REST API
+  ▼
+Render
+  │
+  ▼
+MongoDB Atlas
+```
+---
 
-## 16. Completed scope
+## 16. Completed Scope
 
-Everything in the acceptance list: the full create → analyze → approve → dry run → execute → retry → reconcile → rollback workflow, versioning, history, quarantine, the state machine, structured logging, bounded dataset enforcement, demo data, tests, and these docs.
+The following assignment requirements are implemented and verified:
 
-## 17. Excluded scope (by design)
+- Source and target schema input
+- Bounded dataset enforcement
+- AI-assisted schema analysis
+- Read-only AI inspection tools
+- Structured migration plan generation
+- Backend validation of AI-generated plans
+- Human approval before migration
+- Migration plan versioning
+- Deterministic dry run
+- Field-level validation
+- Quarantine of invalid records
+- Source/transformed/accepted/rejected counts
+- Mock target database
+- Idempotent migration execution
+- Duplicate prevention on retry
+- Source/target reconciliation
+- Migration rollback
+- Append-only migration history
+- Structured application and AI workflow logs
+- Automated tests
+- Demo/seed data
+- Frontend and backend deployment
 
-Production database connectors, arbitrary or AI-written transformation code, distributed or streaming migration, cloud database integrations, multi-source/multi-target, authentication and roles.
+---
+
+## 17. Excluded Scope
+
+The following are intentionally outside the assignment scope:
+
+- Production database connectors
+- Arbitrary source/target databases
+- Arbitrary or AI-generated executable transformation code
+- Distributed migration
+- Streaming migration
+- Cloud database connectors
+- Multiple simultaneous sources
+- Multiple simultaneous targets
+- Authentication and role-based access control
+- Production-scale migration
+- Real marketplace or external system integration
+
+---
 
 ## 18. Known limitations
 
 - **No authentication.** `approvedBy` is a free-text name, so the audit trail records who *claims* to have approved. Do not expose the API publicly with real data.
 - **Sample data goes to the LLM provider.** Tools return up to 10 records plus example values per field. Do not use real personal data with a hosted provider unless that is acceptable to you.
-- **OpenAI and Gemini adapters were tested against mocked HTTP only** (request shape, tool-call parsing, error redaction). They have not been run against the live APIs in this repository's test setup; model-specific behaviour may need small adjustments. The `mock` provider is a heuristic, not an LLM.
+- **AI provider testing:** OpenAI/Gemini provider integrations were verified through live application testing. Provider-specific HTTP behavior is also covered by mocked automated tests. The `mock` provider remains available for deterministic testing without an API key.
 - **Stuck `ANALYZING`:** if the server dies mid-analysis the migration stays `ANALYZING`. There is no recovery timer.
 - **No multi-document transactions** (so it also runs on a standalone MongoDB). Safety comes from atomic status claims, unique-index idempotency, and compensation by `executionId`.
 - **Idempotency key is the source id** (the field mapped to target `id`, otherwise the row position). Two source rows with the same id are treated as a duplicate: the first valid one wins, later ones are quarantined as `DUPLICATE_SOURCE_ID`.
@@ -227,10 +309,12 @@ Production database connectors, arbitrary or AI-written transformation code, dis
 - The mock target store is a single generic collection, not a typed table.
 - No rate limiting or pagination (the dataset is capped at 100 records).
 - The UI was build-checked and render-smoke-tested against real API data in every lifecycle state, but not exercised in a real browser as part of this build; expect to polish layout details.
-
+---
 ## 19. Example migration
 
 Source `{customer_id:number, full_name, email, phone, city}` → target `{id:number, name, email, contact_number, location}` with the brief's two records. The agent maps `customer_id→id`, `full_name→name`, `email→email`, `phone→contact_number` (`normalize_phone`), `city→location`. Dry run: record 1 accepted (`phone` becomes `919876543210`); record 2 rejected: `email: Invalid email format (EMAIL_FORMAT)`.
+
+---
 
 ## 20. Reviewer / demo instructions
 
@@ -243,3 +327,10 @@ Source `{customer_id:number, full_name, email, phone, city}` → target `{id:num
 7. **Reconciliation:** Expected 92, Inserted 92, Difference 0, passed. **Quarantine:** 8 rows with the original records.
 8. **Roll back migration:** 92 removed; the target store is empty, quarantine and history remain, execution is blocked.
 9. Seed from the CLI instead: `npm run seed` in `backend`.
+
+---
+## 🙋‍♂️ Author
+
+Made with 💻 by Suyash Mishra
+
+Feel free to reach out or connect on [LinkedIn](www.linkedin.com/in/mishrasuyash013)

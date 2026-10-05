@@ -1,0 +1,210 @@
+{"ts":"2026-10-04T18:04:28.286Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:04:28.307Z","level":"error","event":"startup_failed","message":"app is not defined"}
+{"ts":"2026-10-04T18:08:06.185Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:08:06.204Z","level":"error","event":"startup_failed","message":"createApp is not a function"}
+{"ts":"2026-10-04T18:08:26.237Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:08:26.258Z","level":"error","event":"startup_failed","message":"app is not defined"}
+{"ts":"2026-10-04T18:08:30.143Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:08:30.169Z","level":"error","event":"startup_failed","message":"createApp is not a function"}
+{"ts":"2026-10-04T18:11:09.093Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:11:09.113Z","level":"info","event":"server_listening","port":5000,"aiProvider":"openai"}
+{"ts":"2026-10-04T18:13:28.128Z","level":"info","event":"migration_created","migrationId":"6ac297486dcb7dde2998db27","planVersion":null,"executionId":null,"actor":"system","sampleCount":10}
+{"ts":"2026-10-04T18:13:28.261Z","level":"info","event":"analysis_failed","migrationId":"6ac297486dcb7dde2998db27","planVersion":null,"executionId":null,"actor":"system","code":"AI_NOT_CONFIGURED"}
+{"ts":"2026-10-04T18:13:29.871Z","level":"info","event":"analysis_failed","migrationId":"6ac297486dcb7dde2998db27","planVersion":null,"executionId":null,"actor":"system","code":"AI_NOT_CONFIGURED"}
+[nodemon] restarting due to changes...
+[nodemon] starting `node src/server.js`
+{"ts":"2026-10-04T18:15:39.147Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:15:39.175Z","level":"info","event":"server_listening","port":5000,"aiProvider":"gemini"}
+[nodemon] restarting due to changes...
+[nodemon] starting `node src/server.js`
+[nodemon] restarting due to changes...
+[nodemon] restarting due to changes...
+[nodemon] starting `node src/server.js`
+[nodemon] restarting due to changes...
+[nodemon] starting `node src/server.js`
+{"ts":"2026-10-04T18:15:43.699Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:15:43.722Z","level":"info","event":"server_listening","port":5000,"aiProvider":"gemini"}
+[nodemon] restarting due to changes...
+[nodemon] starting `node src/server.js`
+{"ts":"2026-10-04T18:15:47.723Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:15:47.746Z","level":"info","event":"server_listening","port":5000,"aiProvider":"gemini"}
+[nodemon] restarting due to changes...
+[nodemon] starting `node src/server.js`
+{"ts":"2026-10-04T18:15:48.936Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:15:48.958Z","level":"info","event":"server_listening","port":5000,"aiProvider":"gemini"}
+[nodemon] restarting due to changes...
+[nodemon] restarting due to changes...
+[nodemon] starting `node src/server.js`
+(node:14488) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 exit listeners added to [Bus]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+[nodemon] restarting due to changes...
+{"ts":"2026-10-04T18:15:56.379Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:15:56.401Z","level":"info","event":"server_listening","port":5000,"aiProvider":"gemini"}
+[nodemon] starting `node src/server.js`
+{"ts":"2026-10-04T18:15:57.046Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:15:57.069Z","level":"info","event":"server_listening","port":5000,"aiProvider":"gemini"}
+{"ts":"2026-10-04T18:16:30.205Z","level":"info","event":"agent_started","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.0-flash"}
+{"ts":"2026-10-04T18:16:31.215Z","level":"info","event":"analysis_failed","migrationId":"6ac297486dcb7dde2998db27","planVersion":null,"executionId":null,"actor":"ai:gemini:gemini-2.0-flash","code":"AI_PROVIDER_ERROR"}
+{"ts":"2026-10-04T18:18:01.395Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:18:01.417Z","level":"info","event":"server_listening","port":5000,"aiProvider":"gemini"}
+{"ts":"2026-10-04T18:18:06.684Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:18:06.705Z","level":"info","event":"server_listening","port":5000,"aiProvider":"gemini"}
+{"ts":"2026-10-04T18:18:12.846Z","level":"info","event":"db_connected","host":"127.0.0.1","name":"migration_workbench"}
+{"ts":"2026-10-04T18:18:12.869Z","level":"info","event":"server_listening","port":5000,"aiProvider":"gemini"}
+{"ts":"2026-10-04T18:18:21.861Z","level":"info","event":"agent_started","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash"}
+{"ts":"2026-10-04T18:18:24.152Z","level":"info","event":"tool_called","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema"}
+{"ts":"2026-10-04T18:18:24.153Z","level":"info","event":"tool_completed","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema","ok":true}
+{"ts":"2026-10-04T18:18:24.153Z","level":"info","event":"tool_called","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema"}
+{"ts":"2026-10-04T18:18:24.153Z","level":"info","event":"tool_completed","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema","ok":true}
+{"ts":"2026-10-04T18:18:24.154Z","level":"info","event":"tool_called","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords"}
+{"ts":"2026-10-04T18:18:24.154Z","level":"info","event":"tool_completed","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords","ok":true}
+{"ts":"2026-10-04T18:18:24.154Z","level":"info","event":"tool_called","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations"}
+{"ts":"2026-10-04T18:18:24.154Z","level":"info","event":"tool_completed","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations","ok":true}
+{"ts":"2026-10-04T18:18:31.421Z","level":"info","event":"tool_called","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","tool":"validateMapping"}
+{"ts":"2026-10-04T18:18:31.422Z","level":"info","event":"tool_completed","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","tool":"validateMapping","ok":true}
+{"ts":"2026-10-04T18:18:35.834Z","level":"info","event":"plan_generated","migrationId":"6ac297486dcb7dde2998db27","provider":"gemini:gemini-2.5-flash","mappings":6,"toolCalls":5}
+{"ts":"2026-10-04T18:18:35.897Z","level":"info","event":"migration_analyzed","migrationId":"6ac297486dcb7dde2998db27","planVersion":1,"executionId":null,"actor":"ai:gemini:gemini-2.5-flash","provider":"gemini:gemini-2.5-flash","mappings":6,"risks":6,"requestedBy":"user"}
+{"ts":"2026-10-04T18:21:20.671Z","level":"info","event":"plan_edited","migrationId":"6ac297486dcb7dde2998db27","planVersion":2,"executionId":null,"actor":"user:suyash","basedOnVersion":1}
+{"ts":"2026-10-04T18:21:20.672Z","level":"info","event":"plan_approved","migrationId":"6ac297486dcb7dde2998db27","planVersion":2,"approvedBy":"suyash"}
+{"ts":"2026-10-04T18:21:20.673Z","level":"info","event":"migration_approved","migrationId":"6ac297486dcb7dde2998db27","planVersion":2,"executionId":null,"actor":"user:suyash","approvedBy":"suyash"}
+{"ts":"2026-10-04T18:21:39.125Z","level":"info","event":"dry_run_started","migrationId":"6ac297486dcb7dde2998db27","planVersion":2,"executionId":null,"actor":"system"}
+{"ts":"2026-10-04T18:21:39.168Z","level":"info","event":"dry_run_completed","migrationId":"6ac297486dcb7dde2998db27","planVersion":2,"executionId":"10ef0be7-ac25-4729-83eb-650b3b30d4b7","actor":"system","source":10,"transformed":10,"accepted":6,"rejected":4}
+{"ts":"2026-10-04T18:22:51.090Z","level":"info","event":"migration_started","migrationId":"6ac297486dcb7dde2998db27","planVersion":2,"executionId":"4b16363d-bbc0-4d9a-a9b3-7f08482d29c8","actor":"user:user"}
+{"ts":"2026-10-04T18:22:51.149Z","level":"info","event":"migration_completed","migrationId":"6ac297486dcb7dde2998db27","planVersion":2,"executionId":"4b16363d-bbc0-4d9a-a9b3-7f08482d29c8","actor":"user:user","inserted":6,"duplicates":0,"rejected":4,"isRetry":false}
+{"ts":"2026-10-04T18:26:00.489Z","level":"info","event":"migration_rolled_back","migrationId":"6ac297486dcb7dde2998db27","planVersion":2,"executionId":null,"actor":"user:user","removed":6,"executions":1}
+{"ts":"2026-10-04T18:30:28.225Z","level":"info","event":"migration_created","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":null,"executionId":null,"actor":"system","sampleCount":4}
+{"ts":"2026-10-04T18:30:28.231Z","level":"info","event":"agent_started","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash"}
+{"ts":"2026-10-04T18:30:30.770Z","level":"info","event":"tool_called","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema"}
+{"ts":"2026-10-04T18:30:30.770Z","level":"info","event":"tool_completed","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema","ok":true}
+{"ts":"2026-10-04T18:30:30.770Z","level":"info","event":"tool_called","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema"}
+{"ts":"2026-10-04T18:30:30.770Z","level":"info","event":"tool_completed","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema","ok":true}
+{"ts":"2026-10-04T18:30:30.770Z","level":"info","event":"tool_called","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords"}
+{"ts":"2026-10-04T18:30:30.770Z","level":"info","event":"tool_completed","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords","ok":true}
+{"ts":"2026-10-04T18:30:30.770Z","level":"info","event":"tool_called","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations"}
+{"ts":"2026-10-04T18:30:30.770Z","level":"info","event":"tool_completed","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations","ok":true}
+{"ts":"2026-10-04T18:30:36.101Z","level":"info","event":"tool_called","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","tool":"validateMapping"}
+{"ts":"2026-10-04T18:30:36.101Z","level":"info","event":"tool_completed","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","tool":"validateMapping","ok":true}
+{"ts":"2026-10-04T18:30:40.703Z","level":"info","event":"plan_generated","migrationId":"6ac29b4479a357600c4ab4ee","provider":"gemini:gemini-2.5-flash","mappings":5,"toolCalls":5}
+{"ts":"2026-10-04T18:30:40.711Z","level":"info","event":"migration_analyzed","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"executionId":null,"actor":"ai:gemini:gemini-2.5-flash","provider":"gemini:gemini-2.5-flash","mappings":5,"risks":3,"requestedBy":"user"}
+{"ts":"2026-10-04T18:31:29.065Z","level":"info","event":"plan_approved","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"approvedBy":"suyash"}
+{"ts":"2026-10-04T18:31:29.067Z","level":"info","event":"migration_approved","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"executionId":null,"actor":"user:suyash","approvedBy":"suyash"}
+{"ts":"2026-10-04T18:31:31.006Z","level":"info","event":"dry_run_started","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"executionId":null,"actor":"system"}
+{"ts":"2026-10-04T18:31:31.015Z","level":"info","event":"dry_run_completed","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"executionId":"b6477acc-a69e-44a3-b114-a937011bd5af","actor":"system","source":4,"transformed":4,"accepted":4,"rejected":0}
+{"ts":"2026-10-04T18:31:34.182Z","level":"info","event":"dry_run_started","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"executionId":null,"actor":"system"}
+{"ts":"2026-10-04T18:31:34.189Z","level":"info","event":"dry_run_completed","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"executionId":"dab0baa4-13a5-4666-b42b-7b2376ecb264","actor":"system","source":4,"transformed":4,"accepted":4,"rejected":0}
+{"ts":"2026-10-04T18:31:39.702Z","level":"info","event":"migration_started","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"executionId":"b04fe49b-dd50-4766-a62b-e855a852c42e","actor":"user:user"}
+{"ts":"2026-10-04T18:31:39.745Z","level":"info","event":"migration_completed","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"executionId":"b04fe49b-dd50-4766-a62b-e855a852c42e","actor":"user:user","inserted":4,"duplicates":0,"rejected":0,"isRetry":false}
+{"ts":"2026-10-04T18:31:46.686Z","level":"info","event":"migration_retried","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"executionId":"0a4909eb-a0d3-4624-8880-db426194b1eb","actor":"user:user"}
+{"ts":"2026-10-04T18:31:46.743Z","level":"info","event":"migration_completed","migrationId":"6ac29b4479a357600c4ab4ee","planVersion":1,"executionId":"0a4909eb-a0d3-4624-8880-db426194b1eb","actor":"user:user","inserted":0,"duplicates":4,"rejected":0,"isRetry":true}
+{"ts":"2026-10-04T18:32:58.736Z","level":"info","event":"migration_created","migrationId":"6ac29bda79a357600c4ab563","planVersion":null,"executionId":null,"actor":"system","sampleCount":3}
+{"ts":"2026-10-04T18:32:58.740Z","level":"info","event":"agent_started","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash"}
+{"ts":"2026-10-04T18:33:02.830Z","level":"info","event":"tool_called","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema"}
+{"ts":"2026-10-04T18:33:02.830Z","level":"info","event":"tool_completed","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema","ok":true}
+{"ts":"2026-10-04T18:33:02.830Z","level":"info","event":"tool_called","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema"}
+{"ts":"2026-10-04T18:33:02.830Z","level":"info","event":"tool_completed","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema","ok":true}
+{"ts":"2026-10-04T18:33:02.831Z","level":"info","event":"tool_called","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords"}
+{"ts":"2026-10-04T18:33:02.831Z","level":"info","event":"tool_completed","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords","ok":true}
+{"ts":"2026-10-04T18:33:02.831Z","level":"info","event":"tool_called","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations"}
+{"ts":"2026-10-04T18:33:02.831Z","level":"info","event":"tool_completed","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations","ok":true}
+{"ts":"2026-10-04T18:33:09.180Z","level":"info","event":"tool_called","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","tool":"validateMapping"}
+{"ts":"2026-10-04T18:33:09.180Z","level":"info","event":"tool_completed","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","tool":"validateMapping","ok":true}
+{"ts":"2026-10-04T18:33:13.995Z","level":"info","event":"plan_generated","migrationId":"6ac29bda79a357600c4ab563","provider":"gemini:gemini-2.5-flash","mappings":5,"toolCalls":5}
+{"ts":"2026-10-04T18:33:14.002Z","level":"info","event":"migration_analyzed","migrationId":"6ac29bda79a357600c4ab563","planVersion":1,"executionId":null,"actor":"ai:gemini:gemini-2.5-flash","provider":"gemini:gemini-2.5-flash","mappings":5,"risks":2,"requestedBy":"user"}
+{"ts":"2026-10-04T18:34:15.910Z","level":"info","event":"plan_approved","migrationId":"6ac29bda79a357600c4ab563","planVersion":1,"approvedBy":"suyash"}
+{"ts":"2026-10-04T18:34:15.912Z","level":"info","event":"migration_approved","migrationId":"6ac29bda79a357600c4ab563","planVersion":1,"executionId":null,"actor":"user:suyash","approvedBy":"suyash"}
+{"ts":"2026-10-04T18:34:23.119Z","level":"info","event":"dry_run_started","migrationId":"6ac29bda79a357600c4ab563","planVersion":1,"executionId":null,"actor":"system"}
+{"ts":"2026-10-04T18:34:23.130Z","level":"info","event":"dry_run_completed","migrationId":"6ac29bda79a357600c4ab563","planVersion":1,"executionId":"c44aab06-27d8-4d57-9b00-a43dac53ea13","actor":"system","source":3,"transformed":3,"accepted":3,"rejected":0}
+{"ts":"2026-10-04T18:35:27.410Z","level":"info","event":"dry_run_started","migrationId":"6ac29bda79a357600c4ab563","planVersion":1,"executionId":null,"actor":"system"}
+{"ts":"2026-10-04T18:35:27.418Z","level":"info","event":"dry_run_completed","migrationId":"6ac29bda79a357600c4ab563","planVersion":1,"executionId":"1d7099ec-bf21-4f3d-a636-aa0dda1c11db","actor":"system","source":3,"transformed":3,"accepted":3,"rejected":0}
+{"ts":"2026-10-04T18:35:51.088Z","level":"info","event":"migration_started","migrationId":"6ac29bda79a357600c4ab563","planVersion":1,"executionId":"96bcc809-aa19-4206-aeb4-fdb29f282fc3","actor":"user:user"}
+{"ts":"2026-10-04T18:35:51.108Z","level":"info","event":"migration_completed","migrationId":"6ac29bda79a357600c4ab563","planVersion":1,"executionId":"96bcc809-aa19-4206-aeb4-fdb29f282fc3","actor":"user:user","inserted":3,"duplicates":0,"rejected":0,"isRetry":false}
+{"ts":"2026-10-04T18:36:37.705Z","level":"info","event":"migration_created","migrationId":"6ac29cb579a357600c4ab5b3","planVersion":null,"executionId":null,"actor":"system","sampleCount":6}
+{"ts":"2026-10-04T18:36:37.710Z","level":"info","event":"agent_started","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash"}
+{"ts":"2026-10-04T18:36:40.347Z","level":"info","event":"tool_called","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema"}
+{"ts":"2026-10-04T18:36:40.347Z","level":"info","event":"tool_completed","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema","ok":true}
+{"ts":"2026-10-04T18:36:40.347Z","level":"info","event":"tool_called","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema"}
+{"ts":"2026-10-04T18:36:40.347Z","level":"info","event":"tool_completed","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema","ok":true}
+{"ts":"2026-10-04T18:36:40.348Z","level":"info","event":"tool_called","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords"}
+{"ts":"2026-10-04T18:36:40.348Z","level":"info","event":"tool_completed","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords","ok":true}
+{"ts":"2026-10-04T18:36:40.348Z","level":"info","event":"tool_called","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations"}
+{"ts":"2026-10-04T18:36:40.348Z","level":"info","event":"tool_completed","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations","ok":true}
+{"ts":"2026-10-04T18:36:45.959Z","level":"info","event":"tool_called","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","tool":"validateMapping"}
+{"ts":"2026-10-04T18:36:45.959Z","level":"info","event":"tool_completed","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","tool":"validateMapping","ok":true}
+{"ts":"2026-10-04T18:36:49.646Z","level":"info","event":"plan_generated","migrationId":"6ac29cb579a357600c4ab5b3","provider":"gemini:gemini-2.5-flash","mappings":5,"toolCalls":5}
+{"ts":"2026-10-04T18:36:49.652Z","level":"info","event":"migration_analyzed","migrationId":"6ac29cb579a357600c4ab5b3","planVersion":1,"executionId":null,"actor":"ai:gemini:gemini-2.5-flash","provider":"gemini:gemini-2.5-flash","mappings":5,"risks":4,"requestedBy":"user"}
+{"ts":"2026-10-04T18:37:31.381Z","level":"info","event":"plan_approved","migrationId":"6ac29cb579a357600c4ab5b3","planVersion":1,"approvedBy":"suyash"}
+{"ts":"2026-10-04T18:37:31.384Z","level":"info","event":"migration_approved","migrationId":"6ac29cb579a357600c4ab5b3","planVersion":1,"executionId":null,"actor":"user:suyash","approvedBy":"suyash"}
+{"ts":"2026-10-04T18:37:33.192Z","level":"info","event":"dry_run_started","migrationId":"6ac29cb579a357600c4ab5b3","planVersion":1,"executionId":null,"actor":"system"}
+{"ts":"2026-10-04T18:37:33.205Z","level":"info","event":"dry_run_completed","migrationId":"6ac29cb579a357600c4ab5b3","planVersion":1,"executionId":"10b60376-0874-4892-a7ab-15026af2d35a","actor":"system","source":6,"transformed":6,"accepted":2,"rejected":4}
+{"ts":"2026-10-04T18:37:49.198Z","level":"info","event":"migration_started","migrationId":"6ac29cb579a357600c4ab5b3","planVersion":1,"executionId":"ef0a89c6-eda3-4436-9c87-5d74c8296f78","actor":"user:user"}
+{"ts":"2026-10-04T18:37:49.219Z","level":"info","event":"migration_completed","migrationId":"6ac29cb579a357600c4ab5b3","planVersion":1,"executionId":"ef0a89c6-eda3-4436-9c87-5d74c8296f78","actor":"user:user","inserted":2,"duplicates":0,"rejected":4,"isRetry":false}
+{"ts":"2026-10-04T18:39:01.832Z","level":"info","event":"migration_created","migrationId":"6ac29d4579a357600c4ab609","planVersion":null,"executionId":null,"actor":"system","sampleCount":2}
+{"ts":"2026-10-04T18:39:01.837Z","level":"info","event":"agent_started","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash"}
+{"ts":"2026-10-04T18:39:03.789Z","level":"info","event":"tool_called","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema"}
+{"ts":"2026-10-04T18:39:03.789Z","level":"info","event":"tool_completed","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema","ok":true}
+{"ts":"2026-10-04T18:39:03.789Z","level":"info","event":"tool_called","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema"}
+{"ts":"2026-10-04T18:39:03.789Z","level":"info","event":"tool_completed","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema","ok":true}
+{"ts":"2026-10-04T18:39:03.789Z","level":"info","event":"tool_called","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords"}
+{"ts":"2026-10-04T18:39:03.790Z","level":"info","event":"tool_completed","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords","ok":true}
+{"ts":"2026-10-04T18:39:03.790Z","level":"info","event":"tool_called","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations"}
+{"ts":"2026-10-04T18:39:03.790Z","level":"info","event":"tool_completed","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations","ok":true}
+{"ts":"2026-10-04T18:39:08.806Z","level":"info","event":"tool_called","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","tool":"validateMapping"}
+{"ts":"2026-10-04T18:39:08.806Z","level":"info","event":"tool_completed","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","tool":"validateMapping","ok":true}
+{"ts":"2026-10-04T18:39:11.774Z","level":"info","event":"plan_generated","migrationId":"6ac29d4579a357600c4ab609","provider":"gemini:gemini-2.5-flash","mappings":3,"toolCalls":5}
+{"ts":"2026-10-04T18:39:11.785Z","level":"info","event":"migration_analyzed","migrationId":"6ac29d4579a357600c4ab609","planVersion":1,"executionId":null,"actor":"ai:gemini:gemini-2.5-flash","provider":"gemini:gemini-2.5-flash","mappings":3,"risks":4,"requestedBy":"user"}
+{"ts":"2026-10-04T18:40:09.310Z","level":"info","event":"migration_created","migrationId":"6ac29d8979a357600c4ab619","planVersion":null,"executionId":null,"actor":"system","sampleCount":4}
+{"ts":"2026-10-04T18:40:09.316Z","level":"info","event":"agent_started","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash"}
+{"ts":"2026-10-04T18:40:11.578Z","level":"info","event":"tool_called","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema"}
+{"ts":"2026-10-04T18:40:11.578Z","level":"info","event":"tool_completed","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema","ok":true}
+{"ts":"2026-10-04T18:40:11.578Z","level":"info","event":"tool_called","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema"}
+{"ts":"2026-10-04T18:40:11.578Z","level":"info","event":"tool_completed","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema","ok":true}
+{"ts":"2026-10-04T18:40:11.578Z","level":"info","event":"tool_called","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords"}
+{"ts":"2026-10-04T18:40:11.578Z","level":"info","event":"tool_completed","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords","ok":true}
+{"ts":"2026-10-04T18:40:11.578Z","level":"info","event":"tool_called","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations"}
+{"ts":"2026-10-04T18:40:11.578Z","level":"info","event":"tool_completed","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations","ok":true}
+{"ts":"2026-10-04T18:40:16.085Z","level":"info","event":"tool_called","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","tool":"validateMapping"}
+{"ts":"2026-10-04T18:40:16.085Z","level":"info","event":"tool_completed","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","tool":"validateMapping","ok":true}
+{"ts":"2026-10-04T18:40:18.657Z","level":"info","event":"plan_generated","migrationId":"6ac29d8979a357600c4ab619","provider":"gemini:gemini-2.5-flash","mappings":4,"toolCalls":5}
+{"ts":"2026-10-04T18:40:18.661Z","level":"info","event":"migration_analyzed","migrationId":"6ac29d8979a357600c4ab619","planVersion":1,"executionId":null,"actor":"ai:gemini:gemini-2.5-flash","provider":"gemini:gemini-2.5-flash","mappings":4,"risks":0,"requestedBy":"user"}
+{"ts":"2026-10-04T18:40:28.725Z","level":"info","event":"plan_approved","migrationId":"6ac29d8979a357600c4ab619","planVersion":1,"approvedBy":"suyash"}
+{"ts":"2026-10-04T18:40:28.726Z","level":"info","event":"migration_approved","migrationId":"6ac29d8979a357600c4ab619","planVersion":1,"executionId":null,"actor":"user:suyash","approvedBy":"suyash"}
+{"ts":"2026-10-04T18:40:30.471Z","level":"info","event":"dry_run_started","migrationId":"6ac29d8979a357600c4ab619","planVersion":1,"executionId":null,"actor":"system"}
+{"ts":"2026-10-04T18:40:30.480Z","level":"info","event":"dry_run_completed","migrationId":"6ac29d8979a357600c4ab619","planVersion":1,"executionId":"291732b8-29c8-4cfb-a2f2-8e7f64bd3cbc","actor":"system","source":4,"transformed":4,"accepted":4,"rejected":0}
+{"ts":"2026-10-04T18:40:33.247Z","level":"info","event":"migration_started","migrationId":"6ac29d8979a357600c4ab619","planVersion":1,"executionId":"24e198ab-66d8-4b67-8ad6-6e42f8c0d74f","actor":"user:user"}
+{"ts":"2026-10-04T18:40:33.263Z","level":"info","event":"migration_completed","migrationId":"6ac29d8979a357600c4ab619","planVersion":1,"executionId":"24e198ab-66d8-4b67-8ad6-6e42f8c0d74f","actor":"user:user","inserted":4,"duplicates":0,"rejected":0,"isRetry":false}
+{"ts":"2026-10-04T18:40:56.594Z","level":"info","event":"migration_retried","migrationId":"6ac29d8979a357600c4ab619","planVersion":1,"executionId":"34148996-5158-4321-8140-d168c8bc45f4","actor":"user:user"}
+{"ts":"2026-10-04T18:40:56.615Z","level":"info","event":"migration_completed","migrationId":"6ac29d8979a357600c4ab619","planVersion":1,"executionId":"34148996-5158-4321-8140-d168c8bc45f4","actor":"user:user","inserted":0,"duplicates":4,"rejected":0,"isRetry":true}
+{"ts":"2026-10-05T14:02:18.763Z","level":"info","event":"db_connected","host":"ac-mqfmxqv-shard-00-01.wwgcu9c.mongodb.net","name":"Migration-Workbench"}
+{"ts":"2026-10-05T14:02:19.652Z","level":"info","event":"server_listening","port":5000,"aiProvider":"gemini"}
+{"ts":"2026-10-05T14:32:30.211Z","level":"info","event":"migration_created","migrationId":"6ac3b4fe884fd3e66b23354a","planVersion":null,"executionId":null,"actor":"system","sampleCount":100}
+{"ts":"2026-10-05T14:32:30.323Z","level":"info","event":"agent_started","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash"}
+{"ts":"2026-10-05T14:32:32.633Z","level":"info","event":"tool_called","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema"}
+{"ts":"2026-10-05T14:32:32.634Z","level":"info","event":"tool_completed","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema","ok":true}
+{"ts":"2026-10-05T14:32:32.635Z","level":"info","event":"tool_called","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema"}
+{"ts":"2026-10-05T14:32:32.635Z","level":"info","event":"tool_completed","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema","ok":true}
+{"ts":"2026-10-05T14:32:32.635Z","level":"info","event":"tool_called","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords"}
+{"ts":"2026-10-05T14:32:32.636Z","level":"info","event":"tool_completed","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords","ok":true}
+{"ts":"2026-10-05T14:32:32.636Z","level":"info","event":"tool_called","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations"}
+{"ts":"2026-10-05T14:32:32.636Z","level":"info","event":"tool_completed","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations","ok":true}
+{"ts":"2026-10-05T14:32:37.866Z","level":"info","event":"analysis_failed","migrationId":"6ac3b4fe884fd3e66b23354a","planVersion":null,"executionId":null,"actor":"ai:gemini:gemini-2.5-flash","code":"AI_PROVIDER_ERROR"}
+{"ts":"2026-10-05T14:32:52.104Z","level":"info","event":"agent_started","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash"}
+{"ts":"2026-10-05T14:32:58.849Z","level":"info","event":"tool_called","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema"}
+{"ts":"2026-10-05T14:32:58.849Z","level":"info","event":"tool_completed","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectSourceSchema","ok":true}
+{"ts":"2026-10-05T14:32:58.849Z","level":"info","event":"tool_called","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema"}
+{"ts":"2026-10-05T14:32:58.849Z","level":"info","event":"tool_completed","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectTargetSchema","ok":true}
+{"ts":"2026-10-05T14:32:58.849Z","level":"info","event":"tool_called","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords"}
+{"ts":"2026-10-05T14:32:58.849Z","level":"info","event":"tool_completed","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"inspectSampleRecords","ok":true}
+{"ts":"2026-10-05T14:32:58.849Z","level":"info","event":"tool_called","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations"}
+{"ts":"2026-10-05T14:32:58.849Z","level":"info","event":"tool_completed","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"getSupportedTransformations","ok":true}
+{"ts":"2026-10-05T14:33:06.118Z","level":"info","event":"tool_called","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"validateMapping"}
+{"ts":"2026-10-05T14:33:06.118Z","level":"info","event":"tool_completed","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","tool":"validateMapping","ok":true}
+{"ts":"2026-10-05T14:33:11.215Z","level":"info","event":"plan_generated","migrationId":"6ac3b4fe884fd3e66b23354a","provider":"gemini:gemini-2.5-flash","mappings":7,"toolCalls":5}
+{"ts":"2026-10-05T14:33:11.382Z","level":"info","event":"migration_analyzed","migrationId":"6ac3b4fe884fd3e66b23354a","planVersion":1,"executionId":null,"actor":"ai:gemini:gemini-2.5-flash","provider":"gemini:gemini-2.5-flash","mappings":7,"risks":8,"requestedBy":"user"}
+{"ts":"2026-10-05T14:33:18.530Z","level":"info","event":"plan_approved","migrationId":"6ac3b4fe884fd3e66b23354a","planVersion":1,"approvedBy":"reviewer"}
+{"ts":"2026-10-05T14:33:18.582Z","level":"info","event":"migration_approved","migrationId":"6ac3b4fe884fd3e66b23354a","planVersion":1,"executionId":null,"actor":"user:reviewer","approvedBy":"reviewer"}
+{"ts":"2026-10-05T14:33:21.395Z","level":"info","event":"dry_run_started","migrationId":"6ac3b4fe884fd3e66b23354a","planVersion":1,"executionId":null,"actor":"system"}
+{"ts":"2026-10-05T14:33:21.585Z","level":"info","event":"dry_run_completed","migrationId":"6ac3b4fe884fd3e66b23354a","planVersion":1,"executionId":"e6eacaf2-1b2a-45ff-832e-3cdc5b5d40cd","actor":"system","source":100,"transformed":97,"accepted":92,"rejected":8}
+{"ts":"2026-10-05T14:33:25.925Z","level":"info","event":"migration_started","migrationId":"6ac3b4fe884fd3e66b23354a","planVersion":1,"executionId":"d9a5eaab-850b-4c96-98f0-5d4f3078beac","actor":"user:user"}
+{"ts":"2026-10-05T14:33:32.444Z","level":"info","event":"migration_completed","migrationId":"6ac3b4fe884fd3e66b23354a","planVersion":1,"executionId":"d9a5eaab-850b-4c96-98f0-5d4f3078beac","actor":"user:user","inserted":92,"duplicates":0,"rejected":8,"isRetry":false}
+
+

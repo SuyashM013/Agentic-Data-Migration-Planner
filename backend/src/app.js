@@ -13,6 +13,7 @@ function createApp() {
   app.use(cors({ origin: cfg.corsOrigin === '*' ? true : cfg.corsOrigin.split(',').map((s) => s.trim()) }));
   app.use(express.json({ limit: '1mb' }));
 
+  app.get('/', (req, res) => res.json({ message: 'Welcome to the Data Migration API - ALL GOOD ' }));
   app.get('/api/health', (req, res) => res.json({ ok: true }));
   app.get('/api/config', ctrl.config);
   app.get('/api/demo-data', ctrl.demoData);

@@ -9,7 +9,8 @@ const int = (v, d) => {
 function getConfig() {
   return {
     port: int(process.env.PORT, 5000),
-    mongoUri: process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/migration_workbench',
+    mongoUri: process.env.MONGODB_URI,
+    //  'mongodb://127.0.0.1:27017/migration_workbench',
     corsOrigin: process.env.CORS_ORIGIN || '*',
     maxSampleRecords: int(process.env.MAX_SAMPLE_RECORDS, 100),
     ai: {

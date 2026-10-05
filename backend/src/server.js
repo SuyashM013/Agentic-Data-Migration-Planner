@@ -9,6 +9,7 @@ async function main() {
   await connectDb(cfg.mongoUri);
   await ensureIndexes();
   const app = createApp();
+
   app.listen(cfg.port, () => logger.info('server_listening', { port: cfg.port, aiProvider: cfg.ai.provider }));
 }
 

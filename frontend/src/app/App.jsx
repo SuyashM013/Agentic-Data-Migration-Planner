@@ -6,7 +6,7 @@ import { EmptyState } from '../components/ui.jsx';
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#F8F6F1]">
       <header className="border-b border-line bg-surface">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center gap-2 font-semibold">
@@ -21,6 +21,8 @@ export default function App() {
           </nav>
         </div>
       </header>
+      
+
       <main className="mx-auto max-w-6xl px-4 py-6">
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -29,6 +31,7 @@ export default function App() {
           <Route path="*" element={<EmptyState title="Page not found">Check the address or go back to the dashboard.</EmptyState>} />
         </Routes>
       </main>
+      
     </div>
   );
 }

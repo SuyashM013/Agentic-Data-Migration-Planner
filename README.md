@@ -18,8 +18,9 @@ The LLM never executes anything. It has five read-only tools, can only choose fr
 - **Backend API:** https://agentic-data-migration-planner-y6u8.onrender.com
 - **API Health Check:** https://agentic-data-migration-planner-y6u8.onrender.com/api/health
 
-> The application is deployed and available for reviewer evaluation.
-> The backend uses MongoDB persistence and the configured AI provider.
+### [ NOTEE ]
+
+ Before opening the live project, hit the backend health because my render loves to sleep, you have to wake him up before opening the application
 
 --- 
 ## 1. Problem statement
